@@ -11,7 +11,7 @@ Tugas 5 Mata Kuliah Kecerdasan Buatan (Materi 5: Membuat Sistem Pakar Sederhana)
 ## 2. Topik dan Cara Menjalankan Program
 
 - **Topik**: Diagnosis gangguan termal (sistem pendingin & GPU) serta masalah daya (baterai & adaptor) pada perangkat laptop.
-- **Bahasa Pemrograman**: Python 3 (diuji pada Python 3.10+)
+- **Bahasa Pemrograman**: Python 3.14+ (diuji pada versi 3.14.3)
 - **Cara Menjalankan Program**:
   1. Pastikan file `main.py` dan `kb_laptop.json` berada di dalam satu folder yang sama.
   2. Buka terminal / Command Prompt pada direktori tersebut.
