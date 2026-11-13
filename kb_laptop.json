@@ -1,0 +1,71 @@
+{
+  "judul": "Diagnosis gangguan termal dan daya pada laptop",
+  "batas": "Aturan berasal dari 3 dokumentasi teknis resmi (Dell, HP, dan Lenovo Support) dan hanya mencakup masalah sistem pendingin, degradasi baterai, gangguan GPU akibat panas, serta kerusakan adaptor daya. Hasilnya saran awal, bukan keputusan akhir teknisi.",
+  "sumber": {
+    "S1": "How to Troubleshoot Overheating, Shutdown, or Thermal Issue on a Dell PC, Dell Technologies Support, https://www.dell.com/support/kbdoc/en-us/000126090, diakses 13 Nov 2026",
+    "S2": "HP Notebook PCs - Testing and calibrating the battery, HP Customer Support, https://support.hp.com/us-en/document/ish_2025929-1929258-16, diakses 13 Nov 2026",
+    "S3": "Troubleshooting No Power Issues on ThinkPad Notebooks, Lenovo Support, https://support.lenovo.com/us/en/solutions/ht509520, diakses 13 Nov 2026"
+  },
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": [
+        "kipas berbunyi bising terus-menerus",
+        "area ventilasi terasa sangat panas"
+      ],
+      "mode": "atau",
+      "maka": "suhu sistem berlebih (overheating)",
+      "sumber": "S1"
+    },
+    {
+      "id": "R2",
+      "jika": [
+        "suhu sistem berlebih (overheating)",
+        "laptop mati mendadak saat beban berat"
+      ],
+      "mode": "dan",
+      "maka": "heatsink tersumbat debu atau pasta termal kering",
+      "sumber": "S1"
+    },
+    {
+      "id": "R3",
+      "jika": [
+        "suhu sistem berlebih (overheating)",
+        "muncul garis atau artefak warna di layar"
+      ],
+      "mode": "dan",
+      "maka": "gangguan termal pada chip grafis (GPU)",
+      "sumber": "S1"
+    },
+    {
+      "id": "R4",
+      "jika": [
+        "indikator pengisian menyala tetapi persentase baterai stagnan",
+        "laptop langsung mati saat adaptor dicabut"
+      ],
+      "mode": "atau",
+      "maka": "penurunan kapasitas sel baterai",
+      "sumber": "S2"
+    },
+    {
+      "id": "R5",
+      "jika": [
+        "penurunan kapasitas sel baterai",
+        "usia pakai baterai lebih dari 2 tahun"
+      ],
+      "mode": "dan",
+      "maka": "degradasi sel baterai (perlu ganti baterai)",
+      "sumber": "S2"
+    },
+    {
+      "id": "R6",
+      "jika": [
+        "lampu indikator adaptor mati",
+        "lampu indikator daya laptop tidak menyala"
+      ],
+      "mode": "dan",
+      "maka": "kerusakan adaptor daya (AC adapter)",
+      "sumber": "S3"
+    }
+  ]
+}
